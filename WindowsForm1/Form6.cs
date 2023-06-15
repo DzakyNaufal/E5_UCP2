@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsForm1
 {
-    public partial class Form3 : Form
+    public partial class Form6 : Form
     {
-        public Form3()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'prodiTIDataSet.Mahasiswa' table. You can move, or remove it, as needed.
+            this.mahasiswaTableAdapter.Fill(this.prodiTIDataSet.Mahasiswa);
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -27,7 +34,6 @@ namespace WindowsForm1
             Form1 form1 = new Form1();
             form1.Show();
             this.Hide();
-
         }
     }
 }
